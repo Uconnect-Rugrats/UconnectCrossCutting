@@ -1,4 +1,4 @@
-package co.edu.uco.publiuco.utils;
+package uco.doo.rugrats.uconnect.utils;
 
 public final class UtilNumber {
 
