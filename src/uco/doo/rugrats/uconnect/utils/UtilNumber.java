@@ -27,7 +27,7 @@ public final class UtilNumber {
         return isNull(number) ? getRealDefaultValue() : number;
     }
 
-    public static int getDefaultInt(int number){
+    public static Integer getDefaultInt(Integer number){
         return isNull(number) ? getIntegerDefaultValue() : number;
     }
 
