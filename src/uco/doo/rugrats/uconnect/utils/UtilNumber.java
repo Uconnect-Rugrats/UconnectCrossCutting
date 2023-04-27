@@ -16,11 +16,11 @@ public final class UtilNumber {
     public static Number getDefaultValue() {
         return NUMBER_DEFAULT;
     }
-    public static Byte getIntegerDefaultValue() {
-        return getDefaultValue().byteValue();
+    public static Integer getIntegerDefaultValue() {
+        return getDefaultValue().intValue();
     }
-    public static Float getRealDefaultValue() {
-        return getDefaultValue().floatValue();
+    public static Double getRealDefaultValue() {
+        return getDefaultValue().doubleValue();
     }
 
     public static Double getDefaultReal(Double number){
