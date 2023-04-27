@@ -1,7 +1,9 @@
 package uco.doo.rugrats.uconnect.utils;
 
 public final class UtilText {
-	
+
+	private static final String NUMERIC_RE = "[0-9]+";
+	private static final String DEFAULT_NUMERIC = "0";
 	private static final UtilText INSTANCE = new UtilText();
 	public static final String EMPTY = "";
 	
@@ -18,7 +20,7 @@ public final class UtilText {
 	}
 	
 	public static final String getDefault(final String text, final String defaultValue) {
-		
+
 		String result = text;
 		if (isNull(text)) {
 			result = isNull(defaultValue)? EMPTY: defaultValue;
@@ -28,6 +30,10 @@ public final class UtilText {
 	
 	public static final String getDefaultValue() {
 		return EMPTY;
+	}
+
+	public static final String getDefaultNumeric(){
+		return DEFAULT_NUMERIC;
 	}
 	
 	public static final String getDefault(final String text) {
@@ -40,6 +46,10 @@ public final class UtilText {
 	
 	public final boolean matchPattern(final String text, final String pattern) {
 		return getDefault(text).matches(getDefault(pattern));
+	}
+
+	public static boolean numericIsValid(final String numericString){
+		return isNull(numericString) ? false : getUtilText().matchPattern(numericString, NUMERIC_RE);
 	}
 	
 	public static void main(String[] args) {

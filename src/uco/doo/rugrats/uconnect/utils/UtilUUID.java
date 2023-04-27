@@ -12,6 +12,10 @@ public final class UtilUUID {
 		super();
 	}
 	
+	public static final UUID getDefaultValue(){
+		return DEFAULT_UUID;
+	}
+
 	public static final UUID getDefault(final UUID uuidValue) {
 		return UtilObject.isNull(uuidValue)? DEFAULT_UUID: uuidValue;
 	}

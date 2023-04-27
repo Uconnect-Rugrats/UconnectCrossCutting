@@ -18,12 +18,12 @@ public interface UtilObject {
 		instanceInString.append("class: ").append(object.getClass().getSimpleName()).append("\n");
 		for (Field attribute : attributes){
 			attribute.setAccessible(true);
-				try {
-					instanceInString.append("\t").append(attribute.getName()).append(": ").append(attribute.get(object)).append("\n");
-				}catch (IllegalAccessException e){
-					instanceInString.append(" <<NO ACCESS ATTRIBUTE>> ");
-				}
+			try {
+				instanceInString.append("\t").append(attribute.getName()).append(": ").append(attribute.get(object)).append("\n");
+			}catch (IllegalAccessException e){
+				instanceInString.append(" <<NO ACCESS ATTRIBUTE>> ");
 			}
+		}
 		return instanceInString.toString();
 		}
 
