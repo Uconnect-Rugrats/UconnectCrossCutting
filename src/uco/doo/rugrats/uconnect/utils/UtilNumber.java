@@ -23,8 +23,8 @@ public final class UtilNumber {
         return getDefaultValue().floatValue();
     }
 
-    public static Float getDefaultReal(Float number){
-        return isNull(number) ? getRealDefaultValue() : (float) number;
+    public static Double getDefaultReal(Double number){
+        return isNull(number) ? getRealDefaultValue() : number;
     }
 
     public static Integer getDefaultInt(Integer number){
