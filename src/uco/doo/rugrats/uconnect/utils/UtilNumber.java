@@ -23,7 +23,13 @@ public final class UtilNumber {
         return getDefaultValue().floatValue();
     }
 
+    public static Double getDefaultDouble(Double number){
+        return isNull(number) ? getRealDefaultValue() : number;
+    }
 
+    public static int getDefaultInt(int number){
+        return isNull(number) ? getIntegerDefaultValue() : number;
+    }
 
     public static Number getDefault(final Number number, final Number default_value){
         Number result = number;

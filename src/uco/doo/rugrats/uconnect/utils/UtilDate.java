@@ -31,7 +31,7 @@ public final class UtilDate {
 
     public static final LocalDateTime generate(String dateTime){
         DateTimeFormatter formater = new DateTimeFormatterBuilder().parseCaseInsensitive().append(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")).toFormatter();
-        return (localDateTimeStringIsValid(dateTime)? LocalDateTime.parse(dateTime, formater): getDefault());
+        return (localDateTimeStringIsValid(dateTime)? LocalDateTime.parse(dateTime, formater): getDefaultValue());
     }
 
     public static final LocalDateTime generate(String date, String time){
