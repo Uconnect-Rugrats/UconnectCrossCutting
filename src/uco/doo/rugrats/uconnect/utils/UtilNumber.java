@@ -16,14 +16,20 @@ public final class UtilNumber {
     public static Number getDefaultValue() {
         return NUMBER_DEFAULT;
     }
-    public static byte getIntegerDefaultValue() {
-        return getDefaultValue().byteValue();
+    public static Integer getIntegerDefaultValue() {
+        return getDefaultValue().intValue();
     }
-    public static float getRealDefaultValue() {
-        return getDefaultValue().floatValue();
+    public static Double getRealDefaultValue() {
+        return getDefaultValue().doubleValue();
     }
 
+    public static Double getDefaultReal(Double number){
+        return isNull(number) ? getRealDefaultValue() : number;
+    }
 
+    public static Integer getDefaultInt(Integer number){
+        return isNull(number) ? getIntegerDefaultValue() : number;
+    }
 
     public static Number getDefault(final Number number, final Number default_value){
         Number result = number;

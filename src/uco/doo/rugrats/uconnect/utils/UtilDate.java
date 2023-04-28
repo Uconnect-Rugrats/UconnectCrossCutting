@@ -9,12 +9,20 @@ public final class UtilDate {
     //public static final String LOCALDATETIME_RE = "/((19|2[0-9])[0-9]{2})-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])[T][0-9]{2}[:][0-9]{2}[:][0-9]{2}[.][0-9]{3}/mg";
     public static final String LOCALDATETIME_RE = "((19|2[0-9])[0-9]{2})-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])[ ]([01][0-9]|2[0123])[:]([0-5][0-9])[:]([0-5][0-9])";
 
-    public static final LocalDateTime getDefault(){
+    public static final LocalDateTime getDefaultValue(){
         return LocalDateTime.now();
     }
 
+    public static final boolean isNull(LocalDateTime dateTime){
+        return UtilObject.isNull(dateTime);
+    }
+
+    public static final LocalDateTime getDefault(LocalDateTime dateTime){
+        return isNull(dateTime) ? getDefaultValue() : dateTime;
+    }
+
     public static final String getDefaultAsString(){
-        return getDefault().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+        return getDefaultValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
     }
 
     public static final boolean localDateTimeStringIsValid(final String localdateTimeValue){
@@ -23,7 +31,7 @@ public final class UtilDate {
 
     public static final LocalDateTime generate(String dateTime){
         DateTimeFormatter formater = new DateTimeFormatterBuilder().parseCaseInsensitive().append(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")).toFormatter();
-        return (localDateTimeStringIsValid(dateTime)? LocalDateTime.parse(dateTime, formater): getDefault());
+        return (localDateTimeStringIsValid(dateTime)? LocalDateTime.parse(dateTime, formater): getDefaultValue());
     }
 
     public static final LocalDateTime generate(String date, String time){
