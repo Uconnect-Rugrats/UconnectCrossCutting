@@ -2,6 +2,7 @@ package uco.doo.rugrats.uconnect.utils;
 
 public class UtilBoolean {
     private static final Boolean DEFAULT_BOOLEAN = false;
+    private static final Boolean TRUE_BOOLEAN = true;
     private static final String DEFAULT_BOOLEAN_STRING = "false";
 
     private UtilBoolean(){
@@ -16,8 +17,16 @@ public class UtilBoolean {
         return UtilText.isNull(bool) ? getDefaultValue() : Boolean.parseBoolean(bool);
     }
 
+    public static final String getDefaultAsString(){
+        return DEFAULT_BOOLEAN_STRING;
+    }
+
     public static final Boolean getDefault(Boolean bool){
         return isNull(bool) ? getDefaultValue() : bool;
+    }
+
+    public static final Boolean getTrue(){
+        return TRUE_BOOLEAN;
     }
 
     public static final Boolean getDefaultValue(){
