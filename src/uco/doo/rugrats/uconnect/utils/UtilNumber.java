@@ -43,9 +43,4 @@ public final class UtilNumber {
         return UtilObject.isNull(number);
     }
 
-    public static void main(String[] args) {
-        int number = getIntegerDefaultValue();
-        double numberTwo = getRealDefaultValue();
-        System.out.println(getDefault(null, null));
-    }
 }

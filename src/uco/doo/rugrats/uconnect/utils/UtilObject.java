@@ -4,6 +4,7 @@ import java.lang.reflect.Field;
 
 public interface UtilObject {
 
+	
 	static <O> boolean isNull(final O object) {
 		return object == null;
 	}
@@ -26,5 +27,11 @@ public interface UtilObject {
 		}
 		return instanceInString.toString();
 		}
+	static <O> boolean isDefault(final O object, final O defaultValue) {
+		return  defaultValue.equals(getDefault(object, defaultValue));
+	}
+	static Object getDefaultValue(){
+		return null;
+	}
 
 }

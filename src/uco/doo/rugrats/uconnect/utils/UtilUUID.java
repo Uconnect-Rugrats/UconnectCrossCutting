@@ -31,9 +31,8 @@ public final class UtilUUID {
 	public static final UUID generateUUIDFromString(final String uuidValue) {
 		return (uuidStringIsValid(uuidValue)) ? UUID.fromString(uuidValue) : DEFAULT_UUID;
 	}
-	
-	public static void main(String[] args) {
-		System.out.println(generateUUIDFromString("000g0000-0000-0000-0000-000000000000"));
+	public static final boolean isDefault(final UUID uuidValue) {
+		return DEFAULT_UUID.equals(getDefault(uuidValue));
 	}
 
 }
