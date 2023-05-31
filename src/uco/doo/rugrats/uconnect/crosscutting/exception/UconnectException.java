@@ -21,7 +21,7 @@ public abstract class UconnectException extends RuntimeException {
 	}
 	
 	public final String getTechnicalMessage() {
-		return UtilText.getUtilText().getDefaultIfEmpty(getMessage(), getUserMessage());
+		return UtilText.getDefaultIfEmpty(getMessage(), getUserMessage());
 	}
 
 	public final ExceptionType getType() {
@@ -37,7 +37,7 @@ public abstract class UconnectException extends RuntimeException {
 	}
 
 	public final void setUserMessage(String userMessage) {
-		this.userMessage = UtilText.getUtilText().getDefault(userMessage);
+		this.userMessage = UtilText.getDefault(userMessage);
 	}
 	
 	
