@@ -399,5 +399,33 @@ public class Messages {
 		public static final String TECHNICAL_MESSAGE_LIST = "Se ha presentado una excepcion no conocida al momento de listar el Tipo Reaccion, por favor valide la traza completa de la excepcion presentada";
 	}
 
+	public static final class SqlDAO{
+		private SqlDAO(){}
+		public static final String USER_MESSAGE_CONNECTION_NOT_OPEN = "Se ha presentado un problema trantando de llevar a cabo la operación deseada... intente de nuevo y si el problema persiste contacte el administrador del sistema";
+		public static final String TECHNICAL_MESSAGE_CONNECTION_NOT_OPEN = "No se ha podido crear la operación deseada, debido a que la conexión no esta abierta";
+		
+		public static final class ComentarioSql{
+			private ComentarioSql() {}
+			public static final String USER_MESSAGE_CREATE = "Se ha presentado un problema tratando de registrar la informacion del nuevo comentario. Por favor intente de nuevo y si el problema persiste contacte al administrador respectivo";
+			public static final String TECHNICAL_MESSAGE_CREATE = "Se ha presentado un problema dentro del método create de la clase ComentarioSqlDAO de tipo Sqlexception. Por favor verifique la traza completa de la excepcion presentada";
+			public static final String TECHNICAL_MESSAGE_CREATE_JAVA_EXCEPTION = "Se ha presentado un problema inesperado dentro del método create de la clase ComentarioSqlDAO de tipo Exception. Por favor verifique la traza completa de la excepcion presentada";
+			public static final String USER_MESSAGE_SET_PARAMETERS = "Se ha presentado un error tratando de asignar los valores del comentario. Por favor intente de nuevo y si el problema persiste contacte al administrador respectivo";
+			public static final String TECHNICAL_MESSAGE_SET_PARAMETERS = "Se ha presentado un problema dentro del metodo setParameters de clase ComentarioSqlDAO de tipo SqlException.Por favor verifique la traza completa de la excepcion presentada";
+			public static final String TECHNICAL_MESSAGE_SET_PARAMETERS_JAVA_EXCEPTION = "Se ha presentado un problema inesperado dentro del metodo setParameters de clase ComentarioSqlDAO de tipo Exception. Por favor verifique la traza completa de la excepcion presentada";
+			public static final String USER_MESSAGE_UPDATE = "Se ha presentado un problema tratando de modificar la informacion del comentario . Por favor intente de nuevo y si el problema persiste contacte al administrador respectivo";
+			public static final String TECHNICAL_MESSAGE_UPDATE = "Se ha presentado un problema dentro del método update de la clase ComentarioSqlDAO de tipo Sqlexception.Por favor verifique la traza completa de la excepcion presentada";
+			public static final String TECHNICAL_MESSAGE_UPDATE_JAVA_EXCEPTION = "Se ha presentado un problema inesperado dentro del método update de la clase ComentarioSqlDAO de tipo Exception. Por favor verifique la traza completa de la excepcion presentada";
+			public static final String USER_MESSAGE_READ = "Se ha presentado un problema tratando de traer la información solicitada en comentario. Por favor intente de nuevo y si el problema persiste contacte al administrador respectivo";
+			public static final String TECHNICAL_MESSAGE_READ = "Se ha presentado un problema dentro del metodo read de la clase ComentarioSqlDAO de tipo SqlException. Por favor verifique la traza completa de la excepcion presentada";
+			public static final String TECHNICAL_MESSAGE_READ_JAVA_EXCEPTION = "Se ha presentado un  problema inesperado dentro del metodo READ de la clase ComentarioSqlDAO de tipo Exception. Por favor verifique la traza completa de la excepcion presentada";
+			public static final String USER_MESSAGE_DELETE = "Se ha presentado un problema tratando de eliminar la informacion del comentario. Por favor intente de nuevo y si el problema persiste contacte al administrador respectivo";
+			public static final String TECHNICAL_MESSAGE_DELETE = "Se ha presentado un problema dentro del método delete de la clase ComentarioSqlDAO de tipo Sqlexception. Por favor verifique la traza completa de la excepcion presentada";
+			public static final String TECHNICAL_MESSAGE_DELETE_JAVA_EXCEPTION= "Se ha presentado un problema inesperado dentro del método delete de la clase ComentarioSqlDAO de tipo Exception.Por favor verifique la traza completa de la excepcion presentada";
+			public static final String USER_MESSAGE_EXECUTE = "Se ha presentado un problema tratando de ejecutar la accion solicitada en comentario. Por favor intente de nuevo y si el problema persiste contacte al administrador respectivo";
+			public static final String TECHNICAL_MESSAGE_EXECUTE = "Se ha presentado un problema dentro del metodo execute de la clase ComentarioSqlDAO de tipo Sqlexception. Por favor verifique la traza completa de la excepcion presentada";
+			public static final String TECHNICAL_MESSAGE_EXECUTE_JAVA_EXCEPTION= "Se ha presentado un problema inesperado dentro del método execute de la clase ComentarioSqlDAO de tipo Exception. Por favor verifique la traza completa de la excepcion presentada";
+		}
+		
+	}
 
 }
