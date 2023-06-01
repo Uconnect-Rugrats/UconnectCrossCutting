@@ -13,7 +13,7 @@ public final class UtilDate {
         return LocalDateTime.now();
     }
 
-    public static final boolean isNull(LocalDateTime dateTime){
+    public static final boolean isNull(final LocalDateTime dateTime){
         return UtilObject.isNull(dateTime);
     }
 
