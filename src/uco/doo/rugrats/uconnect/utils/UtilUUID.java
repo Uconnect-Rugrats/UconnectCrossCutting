@@ -34,5 +34,9 @@ public final class UtilUUID {
 	public static final boolean isDefault(final UUID uuidValue) {
 		return DEFAULT_UUID.equals(getDefault(uuidValue));
 	}
+	
+	public static final boolean isNull(final UUID uuidValue){
+		return UtilObject.isNull(uuidValue);
+	}
 
 }

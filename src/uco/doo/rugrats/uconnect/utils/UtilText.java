@@ -64,18 +64,18 @@ public final class UtilText {
 	}
 
 	public boolean numericIsValid(final String numericString){
-		return isNull(numericString) ? false : getUtilText().matchPattern(numericString, NUMERIC_RE);
+		return !isNull(numericString) && getUtilText().matchPattern(numericString, NUMERIC_RE);
 	}
 
 	public boolean emailIsvalid(final String emailAdress){
-		return isNull(emailAdress) ? false : getUtilText().matchPattern(emailAdress, EMAIL_RE);
+		return !isNull(emailAdress) && getUtilText().matchPattern(emailAdress, EMAIL_RE);
 	}
 
 	public boolean textHasOnlyLetters(String string) {
-		return isNull(string) ? false : getUtilText().matchPattern(string, LETTER_RE);
+		return !isNull(string) && getUtilText().matchPattern(string, LETTER_RE);
 	}
 	public boolean textHasLenghtAllowed(String string, int minimumLenght, int maximunLenght) {
-		return isNull(string) ? false : string.length() >= minimumLenght && string.length() <= maximunLenght;
+		return !isNull(string) && string.length() >= minimumLenght && string.length() <= maximunLenght;
 	}
 
 
