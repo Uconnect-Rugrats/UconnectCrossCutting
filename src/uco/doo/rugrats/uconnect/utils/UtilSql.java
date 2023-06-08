@@ -109,7 +109,7 @@ public final class UtilSql {
 
 	public static final void closeConnection(final Connection connection) {
 		try {
-			if (!connectionIsOpen(connection))
+			if (connectionIsOpen(connection))
 				connection.close();
 
 		} catch (final SQLException exception) {
