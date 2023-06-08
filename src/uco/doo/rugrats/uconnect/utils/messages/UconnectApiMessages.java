@@ -13,8 +13,8 @@ public class UconnectApiMessages {
 			super();
 		}
 
-		public static final String CREATE_MESSAGE = "los comentarios han sido consultados exitosamente";
-		public static final String LIST_MESSAGE = "El nuevo comentario fue registrado de forma satisfactoria";
+		public static final String CREATE_MESSAGE = "El nuevo comentario fue registrado de forma satisfactoria";
+		public static final String LIST_MESSAGE = "Los comentarios han sido consultados exitosamente";
 		public static final String MODIFY_MESSAGE = "El comentario fue modificado de forma satisfactoria";
 		public static final String DELETE_MESSAGE = "El comentario fue eliminado de forma satisfactoria";
 	}
